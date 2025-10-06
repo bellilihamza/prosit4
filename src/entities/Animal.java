@@ -1,9 +1,17 @@
 package entities;
 public class Animal {
-    private String nom;
-    private String family ;
-    private int age ;
-    private boolean isMammal;
+    protected String nom;
+    protected String family ;
+    protected int age ;
+    protected boolean isMammal;
+
+    // Constructeur par défaut
+    public Animal() {
+        this.nom = "";
+        this.family = "";
+        this.age = 0;
+        this.isMammal = false;
+    }
 
     public Animal(String nom, String family, int age, boolean isMammal) {
         this.nom = nom;

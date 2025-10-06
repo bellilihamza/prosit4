@@ -42,7 +42,11 @@ public class Zoo {
    public boolean addAnimal(Animal a){
     if (isZooFull()){
         return false;
-    }   
+    }  
+    if (searchAnimal(a)!=-1){
+        return false;
+
+    } 
 
     animals[nbrCages]=a;
     nbrCages++;
