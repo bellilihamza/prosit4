@@ -58,4 +58,5 @@ public class Animal {
    public String toString() {
     return "Animal [nom=" + nom + ", family=" + family + ", age=" + age + ", isMammal=" + isMammal + "]";
    }
+ 
 }
