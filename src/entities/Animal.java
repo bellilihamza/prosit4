@@ -5,7 +5,6 @@ public class Animal {
     protected int age ;
     protected boolean isMammal;
 
-    // Constructeur par défaut
     public Animal() {
         this.nom = "";
         this.family = "";

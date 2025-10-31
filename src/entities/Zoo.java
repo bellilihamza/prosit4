@@ -44,19 +44,22 @@ public class Zoo {
         this.city = city;
     }
 
-   public boolean addAnimal(Animal a){
-    if (isZooFull()){
-        return false;
-    }  
-    if (searchAnimal(a)!=-1){
-        return false;
+   public void addAnimal(Animal a) throws ZooFullException, InvalidAgeException {
+    if (a.getAge() < 0) {
+        throw new InvalidAgeException(a.getAge());
+    }
+    
+    if (isZooFull()) {
+        throw new ZooFullException();
+    }
+    
+    if (searchAnimal(a) != -1) {
+        System.out.println("Animal deja present dans le zoo : " + a.getNom());
+        return;
+    }
 
-    } 
-
-    animals[nbrCages]=a;
+    animals[nbrCages] = a;
     nbrCages++;
-    return true;
-
    }  
 public void displayAnimals() {
         for (int i = 0; i < nbrCages; i++) {
